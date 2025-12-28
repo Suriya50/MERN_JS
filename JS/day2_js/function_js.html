@@ -1,0 +1,312 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    
+<script>
+
+// 1.write three different function
+
+
+// ->function declaration
+
+function add1(){
+
+console.log("yaah its fuction declarartion");
+
+}
+
+// add1()   ----> its call back
+
+// ->function expression
+
+const add2=function(){
+
+console.log("hello welcome");
+
+
+}
+add2()
+
+// ->arrow function
+
+
+const add3=(b,c)=>{
+return b*c;
+
+
+}
+console.log(add3(22,4));
+
+
+
+
+// 2.function into three different way arrow function
+
+
+// 1.multi line arrow
+  const greet=(name)=>{
+
+return("hello"+""+name)
+
+}
+console.log(greet(" smart suryaaa"));
+
+// 2.single line arrow
+const greett=(name)=>{return ("hello"+""+name)}
+
+console.log(greett("smart suryaaaaaa"));
+
+
+// 3.arrow+if statement process
+
+const greets=(name)=>{
+
+if(name==="smart suryaaaaaa"){
+
+console.log("hello"+name);
+
+}
+
+}
+greets("smart suryaaaaaa");
+
+// 3.write a function calculate billl take two parameter calculate amount
+
+const calculateBill=(amount,taxpercentage)=>{
+
+const tax= amount*taxpercentage
+const final=amount+tax
+return final
+
+}
+
+console.log(calculateBill(6000,10/100));
+
+
+// 4.You have this object:
+
+
+const user = {
+  name: "Ajay",
+  sayName: function () {
+    console.log(this.name);
+  },
+
+  sayArrow:()=>{
+
+    console.log(this.name);
+    
+  }
+
+};
+console.log(user.sayName());
+console.log(user.sayArrow());
+
+
+//5. Write an arrow function square that:
+
+
+
+const square=zero=>zero*zero
+
+console.log(square(8));
+
+
+//6. Write a function sumAll that accepts any number of arguments and returns their sum.
+// Then rewrite sumAll as an arrow function using rest parameter.
+
+// normal function
+function sumAll(){
+
+
+let datas=0
+
+for(let i=0;i<arguments.length;i++){
+datas+=arguments[i]
+}
+
+return datas
+}
+
+
+// arrow function using
+
+console.log(sumAll(1,4,5));
+
+
+const sumalll=(...adds)=>adds.reduce((acu,ele)=>acu+ele)
+
+
+console.log(sumalll(1,4,5));
+
+
+// 7.Given the array:
+
+
+// js
+// const marks = [98, 45, 67, 30, 88, 76];
+
+// Write a function (you choose the type) getPassedMarks that returns only marks greater than or equal to 50, using filter and an arrow callback.
+
+const marks = [98, 45, 67, 30, 88, 76];
+
+const getPassedMarks=marks=> marks.filter((mark)=>mark>=50)
+
+
+
+console.log(getPassedMarks(marks));
+
+
+// 8.Rewrite this arrow function as a normal function declaration and as a function expression:
+
+
+// js
+// const formatName = (firstName, lastName) =>
+//   firstName.toUpperCase() + " " + lastName.toUpperCase();
+
+
+// 1.normal function
+
+function norful(firstname,lastname){
+
+return (firstname+" "+lastname).toUpperCase()
+
+
+}
+     console.log( norful("vikram","vedha"));
+   
+
+// 2.function expression
+
+      const values=function (firstname,lastname){
+
+return (firstname+" "+lastname).toUpperCase()
+
+
+}
+ console.log(values("smart","surya"));
+ 
+//  3.arrow function
+
+ const formatName = (firstName, lastName) =>{
+  return (firstName+ " " + lastName).toUpperCase()
+
+ }
+
+ console.log(formatName("king","kohli"));
+ 
+
+
+//  9.Observe the code and write:
+
+// What will be logged for each console.log?
+
+// Why is there any error (if you think so)?
+
+
+// normal function is hoistiing will work 
+
+
+console.log(add(2, 3));
+
+function add(a, b) {
+  return a + b;
+} 
+
+
+
+  // arrow function not work hoisting  method they show reference error
+
+const sub = (a, b) => {
+  return a - b;
+};
+console.log(sub(5, 2));
+
+
+// 10.Takes one parameter greeting (like "Hello", "Hi", "Vanakkam"). using templete literals 
+
+
+
+const greetsss = greeting => name => `${greeting}, ${name}!`;
+
+console.log(greetsss("Hello")("Surya"));
+console.log(greetsss("Hi")("Vikram"));
+console.log(greetsss("Vanakkam")("Vedha"));
+
+
+
+// just try .....
+// const items=(name)=>(names)=>(nickname)=>{
+
+// return("hello"+""+name)
+// return("hi"+""+names)
+// return("vanakkam"+""+nickname)
+// }
+
+// console.log(items("surya"));
+// console.log(items("leodass"));
+// console.log(items("vedha"));
+
+
+
+
+
+// 11.Frequency of characters
+// Write a function getCharFrequency(str) that takes a string and returns an object where:
+
+// Key = character
+
+// Value = how many times that character appears
+
+function fruities(fru){
+
+let datass={}
+
+for(let i=0;i<fru.length;i++){
+
+let shoooo=fru[i];
+
+
+if(datass[shoooo]){
+
+  datass[shoooo]=datass[shoooo]+1
+}else{
+
+  datass[shoooo]=1
+}
+}
+
+return datass
+}
+
+
+console.log(fruities("mahindra singh dhoni"));
+
+
+
+// 10. Find the second largest number
+// Write a function secondLargest(arr) that:
+
+// Takes an array of numbers
+
+// Returns the second largest number in the array
+
+// Handles cases like duplicates (e.g., [5, 5, 3, 1]) carefully
+
+// Do not sort the array using sort. You must use logic.
+
+
+let numberesss=[5,5,3,1]
+
+numberesss.sort((a,b)=>a-b)
+
+console.log(numberesss[1]);
+
+</script>
+
+</body>
+</html>

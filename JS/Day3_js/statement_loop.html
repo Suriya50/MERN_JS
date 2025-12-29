@@ -1,0 +1,233 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statement loop</title>
+</head>
+<body>
+
+
+    <script>
+
+
+// 1.Write a function that takes an array of numbers and returns a new array containing only the even numbers. Use a for loop.
+
+function numbers(sum){
+let evennumbers=[];
+
+for(let i=0;i<sum.length;i++){
+
+    let num=sum[i]
+
+    if(num%2===0){
+evennumbers.push(num)
+
+    }
+
+}
+return evennumbers
+
+}
+
+let datas=[2,5,6,7,8,24,31,18]
+
+console.log(numbers(datas));
+
+// 2.Create a function that accepts a number (1-7) and returns the day of the week using a switch statement. Handle invalid inputs.
+
+
+function getDay(dayNumber) {
+  switch (dayNumber) {
+    case 1:
+      return "Monday";
+
+    case 2:
+      return "Tuesday";
+
+    case 3:
+      return "Wednesday";
+
+    case 4:
+      return "Thursday";
+
+    case 5:
+      return "Friday";
+
+    case 6:
+      return "Saturday";
+
+    case 7:
+      return "Sunday";
+
+    default:
+      return "Invalid input. Please enter a number between 1 and 7.";
+  }
+}
+
+
+console.log(getDay(2)); 
+console.log(getDay(6)); 
+console.log(getDay(8)); 
+
+
+
+3.
+
+function countGrades(students) {
+  let gradeCount = {
+    A: 0,
+    B: 0,
+    C: 0
+  };
+
+  for (let i = 0; i < students.length; i++) {
+    let marks = students[i].marks;
+
+    if (marks >= 90) {
+      gradeCount.A++;
+    } else if (marks >= 75 && marks <= 89) {
+      gradeCount.B++;
+    } else {
+      gradeCount.C++;
+    }
+  }
+
+  return gradeCount;
+}
+
+// Example usage
+let students = [
+  { name: "Arun", marks: 95 },
+  { name: "Bala", marks: 82 },
+  { name: "Charan", marks: 70 },
+  { name: "Divya", marks: 88 },
+  { name: "Esha", marks: 60 }
+];
+
+console.log(countGrades(students));
+
+
+4.
+
+
+function checkTruthyFalsy(value) {
+  if (value) {
+    return "truthy";
+  } else {
+    return "falsy";
+  }
+}
+console.log(checkTruthyFalsy(0));         
+console.log(checkTruthyFalsy(""));         
+console.log(checkTruthyFalsy(null));  
+console.log(checkTruthyFalsy([]));       
+console.log(checkTruthyFalsy({}));  
+
+
+5.
+
+
+function getTruthyValues(arr) {
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}
+
+let mixedValues = [0, "hello", "", null, undefined, 42, false, [], {}, NaN];
+
+console.log(getTruthyValues(mixedValues));
+
+
+6.
+
+function getDisplayName(firstName, lastName, nickname) {
+  if (firstName && lastName) {
+    return firstName + " " + lastName;
+  } 
+  else if (firstName) {
+    return firstName;
+  } 
+  else if (nickname) {
+    return nickname;
+  } 
+  else {
+    return "Anonymous";
+  }
+}
+console.log(getDisplayName("Arun", "Kumar", "AK"));     
+console.log(getDisplayName("Arun", "", "AK"));          
+console.log(getDisplayName("", "", "Hero"));  
+
+7.
+
+function fixWithClosure() {
+  for (var i = 1; i <= 5; i++) {
+    (function (value) {
+      setTimeout(function () {
+        console.log(value);
+      }, 1000);
+    })(i);
+  }
+}
+
+fixWithClosure();
+
+8.
+
+function variableReassignmentDemo() {
+  // var
+  var a = 10;
+  a = 20; //...> allowed
+  console.log("var a:", a);
+
+  // let
+  let b = 30;
+  b = 40; // ...>allowed
+  console.log("let b:", b);
+
+  // const (primitive)
+  const c = 50;
+  // c = 60; ..> no reassing
+  console.log("const c:", c);
+
+  // const object
+  const user = {
+    name: "Surya",
+    age: 22
+  };
+
+  user.age = 23;         
+  user.city = "Chennai"; 
+
+
+
+  console.log("const object:", user);
+}
+
+variableReassignmentDemo();
+
+
+9.
+
+function createMultiplier(multiplier) {
+  return function (number) {
+    return multiplier * number;
+  };
+}
+const double = createMultiplier(2);
+console.log(double(5));   
+console.log(double(10));
+
+
+
+
+     </script>
+    
+</body>
+</html>

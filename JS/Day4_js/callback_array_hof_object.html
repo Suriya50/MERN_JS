@@ -1,0 +1,143 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array_object_callback</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 1.Create a function that accepts a callback and prints “Task Completed” only after the callback runs.
+
+
+        function accept(calls) {
+
+            calls()
+            console.log("Task completed")
+
+        }
+
+        function mycall() {
+
+            console.log("its callback functions");
+
+
+        }
+        accept(mycall)
+
+
+        // 2.Pass a callback to validate age eligibility and print result.
+
+        function checkEligibility(age, callback) {
+            callback(age);
+        }
+
+        function validateAge(age) {
+            if (age >= 18) {
+                console.log("Eligible to vote");
+            } else {
+                console.log("Not eligible to vote");
+            }
+        }
+
+        checkEligibility(24, validateAge);
+        checkEligibility(16, validateAge);
+
+        // 3.Simulate API call → success callback → final message.
+
+
+        function fakeApiCall(successCallback) {
+            console.log("Calling API...");
+
+            setTimeout(() => {
+                console.log("API call successful");
+                successCallback();
+            }, 3000);
+        }
+
+        function onSuccess() {
+            console.log("Processing success response");
+        }
+
+
+        fakeApiCall(() => {
+            onSuccess();
+            console.log("Final Message: Task Completed Successfully");
+        });
+
+
+
+        // 4.Add 3 elements to an array and remove the first element.
+
+
+        let arr = [10, 20];
+
+        arr.push(30, 40, 50);
+        arr.shift();
+
+        console.log(arr);
+
+        // 5.Replace the last element in an array without using index value.
+
+        let arrr = [10, 20, 30, 40];
+
+        let a = arrr.pop();
+        console.log(a);
+        let b = arrr.push(99);
+        console.log(b);
+
+        console.log(arrr);
+
+
+
+        // 6.Remove exactly 2 elements from middle of an array.
+
+        const numbers = [12, 34, 56, 78, 90]
+
+        const sliceNumber = numbers.toSpliced(2, 3)
+
+        console.log(sliceNumber);
+
+
+        // 7.From an array, return only even numbers using filter.
+
+
+        let datas = [2, 5, 4, 8, 10, 24, 51, 31, 9]
+
+        let items = datas.filter((even) => even % 2 === 0)
+
+        console.log("its even numbers", items);
+
+
+
+
+        // 8. Convert array of prices to GST-added prices using map.
+
+        let prices = [210, 120, 240, 110, 60]
+
+        let gst = 12
+
+        let products = prices.map((taxes) => taxes + taxes * gst)
+
+        console.log("this are map concept using gst", products);
+
+
+        // 9.Find total salary from salary array using reduce.
+
+        let salary = [22000, 18000, 32000, 25000]
+
+        let amount = salary.reduce((acu, ele) => acu + ele)
+
+
+        console.log("Total salary is ", amount);
+
+    </script>
+
+
+</body>
+
+</html>

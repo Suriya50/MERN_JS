@@ -1,0 +1,49 @@
+<script>
+
+1.
+
+function sumAll(...numbers) {
+  let sum = 0;
+
+  for (let num of numbers) {
+    sum += num;
+  }
+
+  return sum;
+}
+
+console.log(sumAll(10, 20, 30));    
+console.log(sumAll(5, 15, 25, 35)); 
+
+
+2.
+
+function totalMarks(...marks) {
+  return marks.reduce((total, mark) => total + mark, 0);
+}
+
+console.log(totalMarks(80, 90, 85)); 
+
+3.
+
+const scores = [95, 88, 76, 69];
+
+const [first, second, ...remaining] = scores;
+
+console.log(first);     
+console.log(second);     
+console.log(remaining); 
+
+4.
+
+function display(...args) {
+  console.log(args);
+}
+
+display(1, 2, 3); 
+
+
+
+
+
+</script>

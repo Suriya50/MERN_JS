@@ -1,0 +1,54 @@
+<script>
+
+
+    1.
+
+    let value = 0;
+
+let resultOr = value || 10;  
+console.log(resultOr);       
+
+let resultNullish = value ?? 10; 
+console.log(resultNullish);    
+
+2.
+
+let username = "";
+
+
+let displayName = username ?? "Guest";
+console.log(displayName);
+
+
+let displayNameOr = username || "Guest";
+console.log(displayNameOr); 
+
+3.
+
+let score;
+let finalScore = score ?? 50;  
+console.log(finalScore); 
+
+let rating = 0;
+let finalRating = rating ?? 5; 
+console.log(finalRating); 
+
+4.
+
+let user = {
+  name: "Surya",
+  settings: {
+    theme: null
+  }
+};
+
+let theme = user.settings?.theme ?? "light"; 
+console.log(theme); 
+
+let language = user.preferences?.language ?? "en";
+console.log(language); 
+
+
+
+
+</script>

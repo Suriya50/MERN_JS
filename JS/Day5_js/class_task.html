@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+
+        1.
+
+        class Student {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  displayInfo() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+  }
+}
+2.
+const s1 = new Student("Arun", 20);
+const s2 = new Student("Kiran", 22);
+const s3 = new Student("Meena", 21);
+
+s1.displayInfo();
+s2.displayInfo();
+s3.displayInfo();
+
+
+3.
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hi, I am ${this.name}`);
+  }
+}
+
+const p1 = new Person("Surya", 23);
+p1.greet();
+
+    </script>
+</body>
+</html>

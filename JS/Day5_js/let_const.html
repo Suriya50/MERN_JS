@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let_const_task</title>
+</head>
+<body>
+
+    <script>
+
+
+
+// 1.Rewrite an ES5 program using let and const.
+
+var names = "Surya";
+var ages = 22;
+
+var ages = 23; 
+console.log(names, ages);
+
+
+
+const name = "Surya"; 
+let age = 22;
+
+age = 23; 
+console.log(name, age);
+
+
+// 2.Show block scope using let inside if.
+
+
+if (true) {
+  let message = "Hello inside block";
+  console.log(message);
+}
+
+// 3.
+
+// const country = "India";
+// country = "USA"; 
+// console.log(country);
+
+
+// 4.Identify where var causes a bug and fix it with let.
+
+for (var i = 1; i <= 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+
+
+for (let i = 1; i <= 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

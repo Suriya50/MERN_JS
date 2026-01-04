@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        1.
+
+        // normal function
+
+        function first(c, d) {
+
+            return c + d
+
+        }
+
+        console.log(first(4, 5));
+        // arrow function
+
+        let adds = (a, c) => {
+
+            return a + c
+        }
+        console.log(adds(4, 5));
+
+
+        2.
+
+        let subs = a => a + a
+        console.log(subs(5));
+
+        3.
+
+
+        const createUser = (name, age) => ({
+            name: name,
+            age: age
+        });
+
+        console.log(createUser("Surya", 22));
+
+4.
+
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+
+console.log(doubled); 
+
+
+    </script>
+</body>
+
+</html>

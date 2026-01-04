@@ -1,0 +1,57 @@
+<script>
+1.
+
+const originalArray = [1, 2, 3];
+
+// copy using spread
+const copiedArray = [...originalArray];
+
+copiedArray.push(4);
+
+console.log(originalArray); 
+console.log(copiedArray);  
+
+2.
+
+const frontend = ["HTML", "CSS", "JavaScript"];
+const backend = ["Node.js", "MongoDB"];
+
+// merge arrays
+const fullStack = [...frontend, ...backend];
+
+console.log(fullStack);
+
+
+3.
+
+const user = {
+  name: "Surya",
+  age: 22,
+  city: "Chennai"
+};
+
+// update age and add skill
+const updatedUser = {
+  ...user,
+  age: 23,
+  skill: "Frontend Developer"
+};
+
+console.log(updatedUser);
+
+4.
+
+function add(a, b, c) {
+  return a + b + c;
+}
+
+const numbers = [10, 20, 30];
+
+// spread array into arguments
+console.log(add(...numbers));
+
+
+
+
+
+</script>

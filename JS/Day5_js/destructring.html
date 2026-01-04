@@ -1,0 +1,52 @@
+<script>
+
+
+
+
+    1.
+    const numbers = [10, 20, 30];
+
+
+const [a, b, c] = numbers;
+
+console.log(a); 
+console.log(b); 
+console.log(c); 
+
+2.
+const user = {
+  name: "Surya",
+  age: 22,
+  city: "Chennai"
+};
+
+const { name, age, city } = user;
+
+console.log(name); 
+console.log(age);  
+console.log(city);
+
+3.
+
+const student = {
+  name: "Arun",
+  marks: 90
+};
+
+const { name: studentName, marks: studentMarks } = student;
+
+console.log(studentName);  
+console.log(studentMarks); 
+
+4.
+
+function printUser({ name, age }) {
+  console.log(`Name: ${name}, Age: ${age}`);
+}
+
+printUser({ name: "Surya", age: 22 });
+
+
+
+
+</script>

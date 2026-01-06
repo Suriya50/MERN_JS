@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbacks</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// 1.setTimeout callback print message
+
+function print(names,times,calls){
+
+
+
+setTimeout(()=>{
+calls(names)
+
+},times)
+
+
+}
+
+print("yaah this is call function", 4000, (result) => {
+  console.log(result);
+});
+
+// 2.Nested callback example
+
+
+function step1(value, callback) {
+  setTimeout(() => {
+    console.log("Step 1:", value);
+    callback(value + 1); 
+  }, 1000);
+}
+
+
+function step2(value, callback) {
+  setTimeout(() => {
+    console.log("Step 2:", value);
+    callback(value + 1);
+  }, 1000);
+}
+
+
+function step3(value, callback) {
+  setTimeout(() => {
+    console.log("Step 3:", value);
+    callback(value + 1); 
+  }, 1000);
+}
+
+
+step1(1, (val1) => {
+  step2(val1, (val2) => {
+    step3(val2, (val3) => {
+      console.log("Final Value:", val3);
+    });
+  });
+});
+
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+.dynamic{
+
+
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgb(145, 55, 229);
+  color: azure;
+  border-radius: 5px;
+}
+
+
+.pagess{
+
+    display: flex;
+    gap: 30px;
+}
+.dynamic .links {
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  font-weight: 200;
+  
+}
+
+.contact {
+  padding: 20px;
+}
+
+.contact-form {
+
+   flex-direction: column;
+    gap: 15px;
+
+     border-radius: 20px;
+    height: 20px;
+     
+}
+
+.contact-form input{
+
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 20px;
+    gap: 15px;
+}

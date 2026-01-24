@@ -2,29 +2,44 @@
 
 import "./App.css"
 import About from "./components/About";
+import Datass from "./components/Datass";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 
-const App=()=>{
-
-return(
-
-<>
+const App = () => {
 
 
-<Navbar/>
+    const valuess = {
+
+        names: "surya",
+        age: "20",
+        role: "developer",
+        city: "Tiruvannamalaai"
 
 
-<Home/>
+    }
+
+    return (
+
+        <>
 
 
-<About/>
-
-</>
+            <Navbar />
 
 
+            <Home />
 
-)
+
+            <About />
+
+
+            <Datass name={valuess.names} age={valuess.age} role={valuess.role} city={valuess.city} />
+
+        </>
+
+
+
+    )
 
 
 

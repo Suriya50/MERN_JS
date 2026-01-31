@@ -1,13 +1,18 @@
-import Navigate from "./compounds/Navigate"
-
+import UsersContext from "./context/UsersContext";
+import Userdetail from "./components/Userdetail";
+import FetchConcept from "./components/FetchConcept";
 
 const App = () => {
-  return (
-    <>
-    <Navigate/>
-    
-    </>
-  )
-}
+  const list = [{id:1,name:"surya",city:"chennai",role:"developer"}]
 
-export default App
+  return (
+    // <UsersContext.Provider value={list}>
+    //   <Userdetail />
+    // </UsersContext.Provider>
+
+
+<FetchConcept/>
+  );
+};
+
+export default App;

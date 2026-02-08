@@ -1,12 +1,7 @@
-import React from "react";
-import GoodNumberChecker from "./components/GoodNumberChecker";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <GoodNumberChecker />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
